@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('/register', 'Auth\RegisterController@register');
+Route::post('/login', 'Auth\LoginController@login');
+
+Route::middleware('auth:api')->group(function () {
+    Route::resource('food', 'FoodController');
+
+    Route::get('/target', 'TargetController@getForUser');
+    Route::patch('/target', 'TargetController@updateForUser');
 });
