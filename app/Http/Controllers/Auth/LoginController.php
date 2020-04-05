@@ -21,10 +21,14 @@ class LoginController extends Controller
 
         if ($user) {
             if (Hash::check($credentials['password'], $user->password)) {
-                return ['api_token' => $user->api_token];
+                return [
+                    'token' => $user->api_token,
+                    'name' => $user->name,
+                    'email' => $user->email,
+                ];
             }
         }
 
-        return response('Incorrect login credentials', 402);
+        return response('Incorrect login credentials', 401);
     }
 }

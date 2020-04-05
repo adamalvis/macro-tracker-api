@@ -1,15 +1,44 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes React and other helpers. It's a great starting point while
- * building robust, powerful web applications using React + Laravel.
- */
+import React, { Component } from 'react';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Section, Container } from 'react-bulma-components';
+import thunk from 'redux-thunk';
+import PrimaryMenu from './components/PrimaryMenu';
+import PrimaryNav from './components/PrimaryNav';
+import rootReducer from './state/reducers';
+import { PAGES } from './constants/navigation';
 
-require('./bootstrap');
+import 'react-bulma-components/dist/react-bulma-components.min.css';
 
-/**
- * Next, we will create a fresh React component instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
-require('./components/Example');
+class App extends Component {
+  render() {
+    return (
+      <div className="app-container">
+        <Provider store={store}>
+          <BrowserRouter>
+            <PrimaryNav />
+            <PrimaryMenu />
+            <div className="page-container">
+              <Section>
+                <Container>
+                  <Switch>
+                    {Object.values(PAGES).map((page, index) => (
+                      <Route path={page.path} key={`page-${index}`}>
+                        <page.component />
+                      </Route>
+                    ))}
+                  </Switch>
+                </Container>
+              </Section>
+            </div>
+          </BrowserRouter>
+        </Provider>
+      </div>
+    );
+  }
+}
+
+export default App;

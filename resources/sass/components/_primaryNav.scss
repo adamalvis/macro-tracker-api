@@ -1,0 +1,21 @@
+.primary-nav.navbar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 999;
+  
+  .primary-nav-button {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+  }
+
+  .navbar-brand {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    min-height: auto;
+  }
+}
