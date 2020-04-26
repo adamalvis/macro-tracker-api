@@ -17,6 +17,11 @@ async function login(email, password) {
   return http.post(url, { email, password });
 }
 
+/**
+ * Validates an auth token
+ * @param {string} token - token to validate
+ * @return {Promise}
+ */
 async function validateToken(token) {
   const url = `/api${routes.VALIDATE_TOKEN}`;
   const finalUrl = replaceUrlParams(url, { token });

@@ -1,11 +1,11 @@
 import actionTypes from '../actionTypes/user.actionTypes';
-import { hasFailedLogin } from '../selectors/user.selectors';
 
 const initialState = {
   token: null,
   name: '',
   email: '',
   failedLogin: false,
+  unverifiedEmail: false,
 };
 
 function setUser(state, action) {
@@ -14,8 +14,11 @@ function setUser(state, action) {
 }
 
 function setFailedLogin(state) {
-  console.log('setting failedLogin to true')
   return { ...state, failedLogin: true };
+}
+
+function setUnverifiedEmail(state) {
+  return { ...state, unverifiedEmail: true };
 }
 
 export default (state = initialState, action) => {
@@ -24,6 +27,8 @@ export default (state = initialState, action) => {
       return setUser(state, action);
     case actionTypes.SET_FAILED_LOGIN:
       return setFailedLogin(state);
+    case actionTypes.SET_UNVERIFIED_EMAIL:
+      return setUnverifiedEmail(state);
     default:
       return state;
   }

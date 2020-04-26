@@ -66790,14 +66790,16 @@ var mapDispatchToProps = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _components_form_TextBox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/form/TextBox */ "./resources/js/components/form/TextBox.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_bulma_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bulma-components */ "./node_modules/react-bulma-components/dist/index.js");
-/* harmony import */ var react_bulma_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_bulma_components__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _utilities_validation_utility__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utilities/validation.utility */ "./resources/js/utilities/validation.utility.js");
-/* harmony import */ var _state_actions_user_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../state/actions/user.actions */ "./resources/js/state/actions/user.actions.js");
-/* harmony import */ var _state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../state/selectors/user.selectors */ "./resources/js/state/selectors/user.selectors.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _components_form_TextBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/form/TextBox */ "./resources/js/components/form/TextBox.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_bulma_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bulma-components */ "./node_modules/react-bulma-components/dist/index.js");
+/* harmony import */ var react_bulma_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_bulma_components__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _utilities_validation_utility__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utilities/validation.utility */ "./resources/js/utilities/validation.utility.js");
+/* harmony import */ var _state_actions_user_actions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../state/actions/user.actions */ "./resources/js/state/actions/user.actions.js");
+/* harmony import */ var _state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../state/selectors/user.selectors */ "./resources/js/state/selectors/user.selectors.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66815,6 +66817,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -66869,7 +66872,7 @@ function (_Component) {
           password = _this$state.password;
       var errors = {};
 
-      if (!email || !Object(_utilities_validation_utility__WEBPACK_IMPORTED_MODULE_5__["isValidEmail"])(email)) {
+      if (!email || !Object(_utilities_validation_utility__WEBPACK_IMPORTED_MODULE_6__["isValidEmail"])(email)) {
         errors.email = 'Please enter a valid email address';
       }
 
@@ -66902,38 +66905,45 @@ function (_Component) {
           email = _this$state3.email,
           password = _this$state3.password,
           errors = _this$state3.errors;
-      var failedLogin = this.props.failedLogin;
+      var _this$props = this.props,
+          hasFailedLogin = _this$props.hasFailedLogin,
+          hasUnverifiedEmail = _this$props.hasUnverifiedEmail;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "login-page"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "login-form",
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_form_TextBox__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_form_TextBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
         value: email,
         onChange: this.handleEmailChange,
         placeholder: "Email Address",
         error: errors.email,
         label: "Email Address"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_form_TextBox__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_form_TextBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
         value: password,
         onChange: this.handlePasswordChange,
         placeholder: "Password",
         error: errors.password,
         label: "Password",
         type: "password"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bulma_components__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bulma_components__WEBPACK_IMPORTED_MODULE_5__["Button"], {
         color: "primary",
         onClick: this.handleSubmit
-      }, "Log in"), failedLogin && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        "class": "has-text-danger",
+      }, "Log in"), hasFailedLogin && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "has-text-danger",
         style: {
           marginTop: '10px'
         }
-      }, "Username and password combination is incorrect"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }, "Username and password combination is incorrect"), hasUnverifiedEmail && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "has-text-danger",
         style: {
           marginTop: '10px'
         }
-      }, "Don't have an account? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      }, "This email address is unverified, please verify your email before logging in."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginTop: '10px'
+        }
+      }, "Don't have an account? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/register"
       }, "Register now"))));
     }
@@ -66942,16 +66952,26 @@ function (_Component) {
   return Login;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
+Login.propTypes = {
+  hasFailedLogin: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool.isRequired,
+  hasUnverifiedEmail: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool.isRequired
+};
+Login.defaultProps = {
+  hasFailedLogin: false,
+  hasUnverifiedEmail: false
+};
+
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    failedLogin: Object(_state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_7__["hasFailedLogin"])(state)
+    hasFailedLogin: Object(_state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_8__["hasFailedLogin"])(state),
+    hasUnverifiedEmail: Object(_state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_8__["hasUnverifiedEmail"])(state)
   };
 };
 
 var mapDispatchToProps = {
-  login: _state_actions_user_actions__WEBPACK_IMPORTED_MODULE_6__["login"]
+  login: _state_actions_user_actions__WEBPACK_IMPORTED_MODULE_7__["login"]
 };
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, mapDispatchToProps)(Login));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStateToProps, mapDispatchToProps)(Login));
 
 /***/ }),
 
@@ -67116,6 +67136,12 @@ var routes = {
 function login(_x, _x2) {
   return _login.apply(this, arguments);
 }
+/**
+ * Validates an auth token
+ * @param {string} token - token to validate
+ * @return {Promise}
+ */
+
 
 function _login() {
   _login = _asyncToGenerator(
@@ -67222,7 +67248,8 @@ __webpack_require__.r(__webpack_exports__);
 var prefix = 'user/';
 /* harmony default export */ __webpack_exports__["default"] = ({
   SET_USER: "".concat(prefix, "set-user"),
-  SET_FAILED_LOGIN: "".concat(prefix, "failed-login")
+  SET_FAILED_LOGIN: "".concat(prefix, "failed-login"),
+  SET_UNVERIFIED_EMAIL: "".concat(prefix, "set-unverified-email")
 });
 
 /***/ }),
@@ -67328,7 +67355,7 @@ function togglePrimaryMenu() {
 /*!****************************************************!*\
   !*** ./resources/js/state/actions/user.actions.js ***!
   \****************************************************/
-/*! exports provided: setUser, login, validateToken, setFailedLogin */
+/*! exports provided: setUser, login, validateToken, setFailedLogin, setUnverifiedEmail */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -67337,6 +67364,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateToken", function() { return validateToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setFailedLogin", function() { return setFailedLogin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setUnverifiedEmail", function() { return setUnverifiedEmail; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _actionTypes_user_actionTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actionTypes/user.actionTypes */ "./resources/js/state/actionTypes/user.actionTypes.js");
@@ -67410,7 +67438,7 @@ function login(email, password) {
                   email: email,
                   token: token
                 }));
-                _context.next = 12;
+                _context.next = 13;
                 break;
 
               case 8:
@@ -67422,7 +67450,11 @@ function login(email, password) {
                   dispatch(setFailedLogin());
                 }
 
-              case 12:
+                if (status === 403) {
+                  dispatch(setUnverifiedEmail());
+                }
+
+              case 13:
               case "end":
                 return _context.stop();
             }
@@ -67495,6 +67527,15 @@ function validateToken(token) {
 function setFailedLogin() {
   return {
     type: _actionTypes_user_actionTypes__WEBPACK_IMPORTED_MODULE_1__["default"].SET_FAILED_LOGIN
+  };
+}
+/**
+ * Sets unverifiedEmail user state to true
+ */
+
+function setUnverifiedEmail() {
+  return {
+    type: _actionTypes_user_actionTypes__WEBPACK_IMPORTED_MODULE_1__["default"].SET_UNVERIFIED_EMAIL
   };
 }
 
@@ -67577,7 +67618,6 @@ function togglePrimaryMenu(state) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actionTypes_user_actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/user.actionTypes */ "./resources/js/state/actionTypes/user.actionTypes.js");
-/* harmony import */ var _selectors_user_selectors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../selectors/user.selectors */ "./resources/js/state/selectors/user.selectors.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -67585,12 +67625,12 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-
 var initialState = {
   token: null,
   name: '',
   email: '',
-  failedLogin: false
+  failedLogin: false,
+  unverifiedEmail: false
 };
 
 function setUser(state, action) {
@@ -67599,9 +67639,14 @@ function setUser(state, action) {
 }
 
 function setFailedLogin(state) {
-  console.log('setting failedLogin to true');
   return _objectSpread({}, state, {
     failedLogin: true
+  });
+}
+
+function setUnverifiedEmail(state) {
+  return _objectSpread({}, state, {
+    unverifiedEmail: true
   });
 }
 
@@ -67615,6 +67660,9 @@ function setFailedLogin(state) {
 
     case _actionTypes_user_actionTypes__WEBPACK_IMPORTED_MODULE_0__["default"].SET_FAILED_LOGIN:
       return setFailedLogin(state);
+
+    case _actionTypes_user_actionTypes__WEBPACK_IMPORTED_MODULE_0__["default"].SET_UNVERIFIED_EMAIL:
+      return setUnverifiedEmail(state);
 
     default:
       return state;
@@ -67643,13 +67691,14 @@ var getMenuIsOpen = function getMenuIsOpen(state) {
 /*!********************************************************!*\
   !*** ./resources/js/state/selectors/user.selectors.js ***!
   \********************************************************/
-/*! exports provided: getUserToken, hasFailedLogin, getActiveUser, getIsLoggedIn */
+/*! exports provided: getUserToken, hasFailedLogin, hasUnverifiedEmail, getActiveUser, getIsLoggedIn */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUserToken", function() { return getUserToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasFailedLogin", function() { return hasFailedLogin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasUnverifiedEmail", function() { return hasUnverifiedEmail; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getActiveUser", function() { return getActiveUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getIsLoggedIn", function() { return getIsLoggedIn; });
 /* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reselect */ "./node_modules/reselect/es/index.js");
@@ -67663,6 +67712,11 @@ var hasFailedLogin = function hasFailedLogin(state) {
   var _state$user2;
 
   return state === null || state === void 0 ? void 0 : (_state$user2 = state.user) === null || _state$user2 === void 0 ? void 0 : _state$user2.failedLogin;
+};
+var hasUnverifiedEmail = function hasUnverifiedEmail(state) {
+  var _state$user3;
+
+  return state === null || state === void 0 ? void 0 : (_state$user3 = state.user) === null || _state$user3 === void 0 ? void 0 : _state$user3.unverifiedEmail;
 };
 var getActiveUser = function getActiveUser(state) {
   return state === null || state === void 0 ? void 0 : state.user;

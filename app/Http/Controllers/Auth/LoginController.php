@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
+    const INCORRECT_LOGIN_MESSAGE = 'Incorrect login credentials';
+    const INVALID_TOKEN_MESSAGE = 'Invalid token';
+    const EMAIL_NOT_VERIFIED_MESSAGE = 'Email not verified';
+
     public function login(Request $request)
     {
         $credentials = $request->validate([
@@ -20,12 +24,16 @@ class LoginController extends Controller
         $user = User::where('email', $credentials['email'])->first();
 
         if ($user) {
+            if (empty($user->email_verified_at)) {
+                return $this->emailNotVerifiedResponse();
+            }
+
             if (Hash::check($credentials['password'], $user->password)) {
                 return $this->getAuthenticatedUserResponse($user);
             }
         }
 
-        return response('Incorrect login credentials', 401);
+        return response(self::INCORRECT_LOGIN_MESSAGE, 401);
     }
 
     public function validateToken(Request $request)
@@ -34,10 +42,14 @@ class LoginController extends Controller
         $user = User::where('api_token', $token)->first();
 
         if (!$user) {
-            return response('Invalid token', 401);
+            return response(self::INVALID_TOKEN_MESSAGE, 401);
         }
 
         return $this->getAuthenticatedUserResponse($user);
+    }
+
+    private function emailNotVerifiedResponse() {
+        return response(self::EMAIL_NOT_VERIFIED_MESSAGE, 403);
     }
 
     private function getAuthenticatedUserResponse(User $user)

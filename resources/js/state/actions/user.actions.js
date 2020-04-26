@@ -46,6 +46,10 @@ export function login(email, password) {
       if (status === 401) {
         dispatch(setFailedLogin());
       }
+
+      if (status === 403) {
+        dispatch(setUnverifiedEmail());
+      }
     }
   };
 }
@@ -73,4 +77,11 @@ export function validateToken(token) {
  */
 export function setFailedLogin() {
   return { type: userActionTypes.SET_FAILED_LOGIN };
+}
+
+/**
+ * Sets unverifiedEmail user state to true
+ */
+export function setUnverifiedEmail() {
+  return { type: userActionTypes.SET_UNVERIFIED_EMAIL };
 }
