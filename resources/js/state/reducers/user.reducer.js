@@ -3,8 +3,8 @@ import { hasFailedLogin } from '../selectors/user.selectors';
 
 const initialState = {
   token: null,
-  firstName: '',
-  lastName: '',
+  name: '',
+  email: '',
   failedLogin: false,
 };
 

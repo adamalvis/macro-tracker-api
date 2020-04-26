@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import TextBox from '../components/form/TextBox';
 import { connect } from 'react-redux';
 import { Button } from 'react-bulma-components';
@@ -85,9 +86,10 @@ class Login extends Component {
               class="has-text-danger"
               style={{ marginTop: '10px' }}
             >
-              Username and/or password are incorrect
+              Username and password combination is incorrect
             </p>
           )}
+          <p style={{ marginTop: '10px' }}>Don't have an account? <Link to="/register">Register now</Link></p>
         </form>
       </div>
     )

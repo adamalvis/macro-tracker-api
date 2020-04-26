@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 
 Route::post('/register', 'Auth\RegisterController@register');
 Route::post('/login', 'Auth\LoginController@login');
+Route::get('/validate-token', 'Auth\LoginController@validateToken');
 
 Route::middleware('auth:api')->group(function () {
     Route::resource('food', 'FoodController');

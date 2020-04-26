@@ -1,6 +1,6 @@
-import axios from 'axios';
 import userActionTypes from '../actionTypes/user.actionTypes';
-import { getUserToken } from '../selectors/user.selectors';
+import { setAuthToken } from '../../utilities/auth.utility';
+import userService from '../../services/user.service';
 
 /**
  * Set's a user in state
@@ -12,6 +12,9 @@ import { getUserToken } from '../selectors/user.selectors';
  * @return {object}
  */
 export function setUser({ name, email, token }) {
+  // stores token in cookie
+  setAuthToken(token);
+
   return {
     type: userActionTypes.SET_USER,
     user: {
@@ -28,22 +31,39 @@ export function setUser({ name, email, token }) {
  * 
  * @param {string} email - attempted username
  * @param {string} password - attempted password
+ * @return {Function} - thunk
  */
 export function login(email, password) {
   return async (dispatch) => {
-    const url = '/api/login';
-
     try {
-      const result = await axios.post(url, { email, password });
-      const { token, name } = result.data;
+      const result = await userService.login(email, password);
+      const { token, name } = result;
 
-      dispatch(setUser({ name, token }));
+      dispatch(setUser({ name, email, token }));
     } catch(error) {
       const status = error?.response?.status;
       
       if (status === 401) {
         dispatch(setFailedLogin());
       }
+    }
+  };
+}
+
+/**
+ * Validates locally stored auth token, if valid sets user in state
+ * @param {string} token - stored auth token
+ * @returns {Function} - thunk
+ */
+export function validateToken(token) {
+  return async (dispatch) => {
+    try {
+      const result = await userService.validateToken(token);
+      const { email, name } = result;
+
+      dispatch(setUser({ name, email, token }));
+    } catch (error) {
+      console.log(error);
     }
   };
 }

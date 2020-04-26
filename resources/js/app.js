@@ -26,7 +26,7 @@ class App extends Component {
                 <Container>
                   <Switch>
                     {Object.values(PAGES).map((page, index) => (
-                      <Route path={page.path} key={`page-${index}`}>
+                      <Route exact path={page.path} key={`page-${index}`}>
                         <page.component />
                       </Route>
                     ))}

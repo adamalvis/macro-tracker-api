@@ -21,14 +21,31 @@ class LoginController extends Controller
 
         if ($user) {
             if (Hash::check($credentials['password'], $user->password)) {
-                return [
-                    'token' => $user->api_token,
-                    'name' => $user->name,
-                    'email' => $user->email,
-                ];
+                return $this->getAuthenticatedUserResponse($user);
             }
         }
 
         return response('Incorrect login credentials', 401);
+    }
+
+    public function validateToken(Request $request)
+    {
+        $token = $request->input('token');
+        $user = User::where('api_token', $token)->first();
+
+        if (!$user) {
+            return response('Invalid token', 401);
+        }
+
+        return $this->getAuthenticatedUserResponse($user);
+    }
+
+    private function getAuthenticatedUserResponse(User $user)
+    {
+        return [
+            'token' => $user->api_token,
+            'name' => $user->name,
+            'email' => $user->email,
+        ];
     }
 }

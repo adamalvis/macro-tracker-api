@@ -5,6 +5,7 @@ import { Navbar, Button } from 'react-bulma-components';
 import { getMenuIsOpen } from '../state/selectors/navigation.selectors';
 import { togglePrimaryMenu } from '../state/actions/navigation.actions';
 import { getIsLoggedIn } from '../state/selectors/user.selectors';
+import { Link } from 'react-router-dom';
 
 class PrimaryNav extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class PrimaryNav extends Component {
     return (
       <Navbar color="dark" className="primary-nav">
         <Navbar.Brand>
-          <p className="is-size-4">MacroTracker</p>
+          <Link to="/" className="is-size- has-text-white">MacroTracker</Link>
         </Navbar.Brand>
         {isLoggedIn && (
           <Button
