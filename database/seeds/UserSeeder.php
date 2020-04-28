@@ -22,6 +22,8 @@ class UserSeeder extends Seeder
             'api_token' => '123',
         ]);
 
+        $user->markEmailAsVerified();
+
         $faker = Faker\Factory::create();
         $faker->addProvider(new \FakerRestaurant\Provider\en_US\Restaurant($faker));
 

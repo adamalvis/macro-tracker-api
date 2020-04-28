@@ -6,6 +6,7 @@ import { getMenuIsOpen } from '../state/selectors/navigation.selectors';
 import { togglePrimaryMenu } from '../state/actions/navigation.actions';
 import { getIsLoggedIn } from '../state/selectors/user.selectors';
 import { Link } from 'react-router-dom';
+import Logo from '../assets/imgs/macro-tracker-logo.png';
 
 class PrimaryNav extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class PrimaryNav extends Component {
     return (
       <Navbar color="dark" className="primary-nav">
         <Navbar.Brand>
-          <Link to="/" className="is-size- has-text-white">MacroTracker</Link>
+          <Link to="/" className="is-size- has-text-white"><img src={Logo} /></Link>
         </Navbar.Brand>
         {isLoggedIn && (
           <Button

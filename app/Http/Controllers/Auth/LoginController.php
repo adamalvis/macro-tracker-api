@@ -24,10 +24,6 @@ class LoginController extends Controller
         $user = User::where('email', $credentials['email'])->first();
 
         if ($user) {
-            if (empty($user->email_verified_at)) {
-                return $this->emailNotVerifiedResponse();
-            }
-
             if (Hash::check($credentials['password'], $user->password)) {
                 return $this->getAuthenticatedUserResponse($user);
             }
@@ -48,6 +44,10 @@ class LoginController extends Controller
         return $this->getAuthenticatedUserResponse($user);
     }
 
+    public function showLoginForm() {
+        return redirect('/');
+    }
+
     private function emailNotVerifiedResponse() {
         return response(self::EMAIL_NOT_VERIFIED_MESSAGE, 403);
     }
@@ -58,6 +58,7 @@ class LoginController extends Controller
             'token' => $user->api_token,
             'name' => $user->name,
             'email' => $user->email,
+            'hasVerifiedEmail' => $user->hasVerifiedEmail(),
         ];
     }
 }

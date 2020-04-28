@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withUserAuthentication } from '../components/withUserAuthentication.hoc';
 import { getActiveUser } from '../state/selectors/user.selectors';
 import { loadTodaysFood } from '../state/actions/food.actions';
+import DailyTargets from '../components/DailyTargets';
 
 class Home extends Component {
   componentDidMount() {
@@ -12,16 +13,21 @@ class Home extends Component {
   }
 
   render() {
-    const { user } = this.props;
+    const { user, todaysFood } = this.props;
 
     return (
-      <div>Welcome {user.name}</div>
+      <div className="home-page">
+        <DailyTargets
+          food={todaysFood}
+        />
+      </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
   user: getActiveUser(state),
+  todaysFood: state?.food?.todaysFood,
 });
 
 const mapDispatchToProps = {

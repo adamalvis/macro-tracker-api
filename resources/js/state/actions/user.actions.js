@@ -1,5 +1,5 @@
 import userActionTypes from '../actionTypes/user.actionTypes';
-import { setAuthToken } from '../../utilities/auth.utility';
+import { setAuthToken, getAuthToken } from '../../utilities/auth.utility';
 import userService from '../../services/user.service';
 
 /**
@@ -9,9 +9,10 @@ import userService from '../../services/user.service';
  * @param {string} payload.name - user's name
  * @param {string} payload.email - user's email
  * @param {string} payload.token - user's auth token
+ * @param {string} payload.hasVerifiedEmail - user's email verification status
  * @return {object}
  */
-export function setUser({ name, email, token }) {
+export function setUser({ name, email, token, hasVerifiedEmail }) {
   // stores token in cookie
   setAuthToken(token);
 
@@ -21,6 +22,7 @@ export function setUser({ name, email, token }) {
       name,
       email,
       token,
+      hasVerifiedEmail,
       failedLogin: false,
     },
   };
@@ -37,10 +39,10 @@ export function login(email, password) {
   return async (dispatch) => {
     try {
       const result = await userService.login(email, password);
-      const { token, name } = result;
+      const { token, name, hasVerifiedEmail } = result;
 
-      dispatch(setUser({ name, email, token }));
-    } catch(error) {
+      dispatch(setUser({ name, email, token, hasVerifiedEmail }));
+    } catch (error) {
       const status = error?.response?.status;
       
       if (status === 401) {
@@ -55,6 +57,28 @@ export function login(email, password) {
 }
 
 /**
+ * Registers a new user
+ * @param {string} name - new users name
+ * @param {string} email - new users email
+ * @param {string} password - new users password
+ * @returns {Function} - thunk
+ */
+export function register(name, email, password) {
+  return async (dispatch) => {
+    try {
+      const result = await userService.register(name, email, password);
+
+      const { hasVerifiedEmail, token } = result;
+
+      dispatch(setUser({ name, email, token, hasVerifiedEmail }));
+      dispatch(setRegisteredSuccessfully());
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+/**
  * Validates locally stored auth token, if valid sets user in state
  * @param {string} token - stored auth token
  * @returns {Function} - thunk
@@ -63,13 +87,31 @@ export function validateToken(token) {
   return async (dispatch) => {
     try {
       const result = await userService.validateToken(token);
-      const { email, name } = result;
+      const { email, name, hasVerifiedEmail } = result;
 
-      dispatch(setUser({ name, email, token }));
+      dispatch(setUser({ name, email, token, hasVerifiedEmail }));
     } catch (error) {
       console.log(error);
     }
   };
+}
+
+export function resendEmailVerification() {
+  return async (dispatch) => {
+    try {
+      await userService.resendEmailVerification();
+      dispatch(setEmailVerificationResent());
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+/**
+ * Sets registeredSuccessfully user state to true
+ */
+export function setRegisteredSuccessfully() {
+  return { type: userActionTypes.SET_REGISTERED_SUCCESSFULLY };
 }
 
 /**
@@ -84,4 +126,11 @@ export function setFailedLogin() {
  */
 export function setUnverifiedEmail() {
   return { type: userActionTypes.SET_UNVERIFIED_EMAIL };
+}
+
+/**
+ * Sets emailVerificationResent user state to true
+ */
+export function setEmailVerificationResent() {
+  return { type: userActionTypes.SET_EMAIL_VERIFICATION_RESENT };
 }

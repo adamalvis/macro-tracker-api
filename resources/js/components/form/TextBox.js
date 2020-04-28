@@ -55,7 +55,7 @@ TextBox.propTypes = {
 };
 
 TextBox.defaultProps = {
-  value: null,
+  value: '',
   error: null,
   label: null,
   placeholder: '',

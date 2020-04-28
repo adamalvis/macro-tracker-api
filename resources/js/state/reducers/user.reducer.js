@@ -5,7 +5,9 @@ const initialState = {
   name: '',
   email: '',
   failedLogin: false,
-  unverifiedEmail: false,
+  hasVerifiedEmail: false,
+  registeredSuccessfully: false,
+  emailVerificationResent: false,
 };
 
 function setUser(state, action) {
@@ -21,6 +23,14 @@ function setUnverifiedEmail(state) {
   return { ...state, unverifiedEmail: true };
 }
 
+function setRegisteredSuccessfully(state) {
+  return { ...state, registeredSuccessfully: true };
+}
+
+function setEmailVerificationResent(state) {
+  return { ...state, emailVerificationResent: true };
+}
+
 export default (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.SET_USER:
@@ -29,6 +39,10 @@ export default (state = initialState, action) => {
       return setFailedLogin(state);
     case actionTypes.SET_UNVERIFIED_EMAIL:
       return setUnverifiedEmail(state);
+    case actionTypes.SET_REGISTERED_SUCCESSFULLY:
+      return setRegisteredSuccessfully(state);
+    case actionTypes.SET_EMAIL_VERIFICATION_RESENT:
+      return setEmailVerificationResent(state);
     default:
       return state;
   }

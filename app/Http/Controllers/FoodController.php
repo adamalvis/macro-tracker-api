@@ -76,6 +76,7 @@ class FoodController extends Controller
     {
         $user = Auth::user();
         $data = $request->validate(Food::VALIDATION_RULES);
+        return 'FIX ME';
 
         $user->name = $data['name'];
         $user->calories = $data['calories'];

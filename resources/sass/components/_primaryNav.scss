@@ -12,10 +12,13 @@
   }
 
   .navbar-brand {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    min-height: auto;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      min-height: auto;
+      height: 100%;
+    }
   }
 }

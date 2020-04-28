@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getUserToken } from '../state/selectors/user.selectors';
+import { getUserToken, hasVerifiedEmail } from '../state/selectors/user.selectors';
 import Login from '../pages/Login';
 import { getAuthToken } from '../utilities/auth.utility';
 import { validateToken } from '../state/actions/user.actions';
+import UnverifiedEmail from './UnverifiedEmail';
 
 export function withUserAuthentication(WrappedComponent) {
   class Wrapper extends Component {
@@ -20,15 +21,23 @@ export function withUserAuthentication(WrappedComponent) {
     }
 
     render() {
-      const { token } = this.props;
-      const RenderedComponent = !!token ? WrappedComponent : Login;
+      const { token, hasVerifiedEmail } = this.props;
 
-      return <RenderedComponent {...this.props} />
+      let RenderedComponent = WrappedComponent;
+
+      if (!token) {
+        RenderedComponent = Login;
+      } else if (!hasVerifiedEmail) {
+        RenderedComponent = UnverifiedEmail;
+      }
+
+      return <RenderedComponent {...this.props} />;
     }
   }
 
   const mapStateToProps = state => ({
     token: getUserToken(state),
+    hasVerifiedEmail: hasVerifiedEmail(state),
   });
 
   const mapDispatchToProps = {

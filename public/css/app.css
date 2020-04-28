@@ -1454,13 +1454,14 @@ a.has-text-danger:focus {
   right: 10px;
 }
 
-.primary-nav.navbar .navbar-brand {
+.primary-nav.navbar .navbar-brand img {
   position: absolute;
   top: 50%;
   left: 10px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   min-height: auto;
+  height: 100%;
 }
 
 .primary-menu {

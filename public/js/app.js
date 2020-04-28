@@ -66227,6 +66227,92 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./resources/js/assets/imgs/macro-tracker-logo.png":
+/*!*********************************************************!*\
+  !*** ./resources/js/assets/imgs/macro-tracker-logo.png ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/macro-tracker-logo.png?827985cc7c75f0df8627629481f64100";
+
+/***/ }),
+
+/***/ "./resources/js/components/DailyTargets.js":
+/*!*************************************************!*\
+  !*** ./resources/js/components/DailyTargets.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _utilities_food_utility__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/food.utility */ "./resources/js/utilities/food.utility.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var DailyTargets =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(DailyTargets, _Component);
+
+  function DailyTargets() {
+    _classCallCheck(this, DailyTargets);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(DailyTargets).apply(this, arguments));
+  }
+
+  _createClass(DailyTargets, [{
+    key: "render",
+    value: function render() {
+      var food = this.props.food;
+      var totals = Object(_utilities_food_utility__WEBPACK_IMPORTED_MODULE_2__["getMacroTotals"])(food);
+      console.log(totals);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Targets");
+    }
+  }]);
+
+  return DailyTargets;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+DailyTargets.propTypes = {
+  food: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+    calories: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+    protein: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+    fat: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+    carbohydrates: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number
+  }))
+};
+DailyTargets.defaultProps = {
+  food: []
+};
+/* harmony default export */ __webpack_exports__["default"] = (DailyTargets);
+
+/***/ }),
+
 /***/ "./resources/js/components/PrimaryMenu.js":
 /*!************************************************!*\
   !*** ./resources/js/components/PrimaryMenu.js ***!
@@ -66343,6 +66429,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _state_actions_navigation_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../state/actions/navigation.actions */ "./resources/js/state/actions/navigation.actions.js");
 /* harmony import */ var _state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../state/selectors/user.selectors */ "./resources/js/state/selectors/user.selectors.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _assets_imgs_macro_tracker_logo_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../assets/imgs/macro-tracker-logo.png */ "./resources/js/assets/imgs/macro-tracker-logo.png");
+/* harmony import */ var _assets_imgs_macro_tracker_logo_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_assets_imgs_macro_tracker_logo_png__WEBPACK_IMPORTED_MODULE_8__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66360,6 +66448,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -66403,7 +66492,9 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bulma_components__WEBPACK_IMPORTED_MODULE_3__["Navbar"].Brand, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
         to: "/",
         className: "is-size- has-text-white"
-      }, "MacroTracker")), isLoggedIn && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bulma_components__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: _assets_imgs_macro_tracker_logo_png__WEBPACK_IMPORTED_MODULE_8___default.a
+      }))), isLoggedIn && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bulma_components__WEBPACK_IMPORTED_MODULE_3__["Button"], {
         color: "primary",
         className: "primary-nav-button",
         onClick: this.handleClick
@@ -66436,6 +66527,112 @@ var mapDispatchToProps = {
   togglePrimaryMenu: _state_actions_navigation_actions__WEBPACK_IMPORTED_MODULE_5__["togglePrimaryMenu"]
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(PrimaryNav));
+
+/***/ }),
+
+/***/ "./resources/js/components/UnverifiedEmail.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/UnverifiedEmail.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_bulma_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bulma-components */ "./node_modules/react-bulma-components/dist/index.js");
+/* harmony import */ var react_bulma_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_bulma_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _state_actions_user_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../state/actions/user.actions */ "./resources/js/state/actions/user.actions.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+var UnverifiedEmail =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(UnverifiedEmail, _Component);
+
+  function UnverifiedEmail(props) {
+    var _this;
+
+    _classCallCheck(this, UnverifiedEmail);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UnverifiedEmail).call(this, props));
+    _this.handleResendClick = _this.handleResendClick.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(UnverifiedEmail, [{
+    key: "handleResendClick",
+    value: function handleResendClick() {
+      this.props.resendEmailVerification();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          title = _this$props.title,
+          registeredEmail = _this$props.registeredEmail,
+          emailVerificationResent = _this$props.emailVerificationResent;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "title is-2"
+      }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Before you can use MacroTracker, please verify the email we sent you at ", registeredEmail, "."), !emailVerificationResent && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bulma_components__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+        color: "primary",
+        onClick: this.handleResendClick
+      }, "Resend Verification Email"), emailVerificationResent && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "has-text-weight-bold"
+      }, "Email verification resent."));
+    }
+  }]);
+
+  return UnverifiedEmail;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+UnverifiedEmail.propTypes = {
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  registeredEmail: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
+};
+UnverifiedEmail.defaultProps = {
+  title: 'Please verify your email'
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+  var _state$user, _state$user2;
+
+  return {
+    registeredEmail: state === null || state === void 0 ? void 0 : (_state$user = state.user) === null || _state$user === void 0 ? void 0 : _state$user.email,
+    emailVerificationResent: state === null || state === void 0 ? void 0 : (_state$user2 = state.user) === null || _state$user2 === void 0 ? void 0 : _state$user2.emailVerificationResent
+  };
+};
+
+var mapDispatchToProps = {
+  resendEmailVerification: _state_actions_user_actions__WEBPACK_IMPORTED_MODULE_4__["resendEmailVerification"]
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(UnverifiedEmail));
 
 /***/ }),
 
@@ -66538,7 +66735,7 @@ TextBox.propTypes = {
   type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
 };
 TextBox.defaultProps = {
-  value: null,
+  value: '',
   error: null,
   label: null,
   placeholder: '',
@@ -66565,6 +66762,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/Login */ "./resources/js/pages/Login.js");
 /* harmony import */ var _utilities_auth_utility__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utilities/auth.utility */ "./resources/js/utilities/auth.utility.js");
 /* harmony import */ var _state_actions_user_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../state/actions/user.actions */ "./resources/js/state/actions/user.actions.js");
+/* harmony import */ var _UnverifiedEmail__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./UnverifiedEmail */ "./resources/js/components/UnverifiedEmail.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66582,6 +66780,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -66619,8 +66818,17 @@ function withUserAuthentication(WrappedComponent) {
     }, {
       key: "render",
       value: function render() {
-        var token = this.props.token;
-        var RenderedComponent = !!token ? WrappedComponent : _pages_Login__WEBPACK_IMPORTED_MODULE_3__["default"];
+        var _this$props2 = this.props,
+            token = _this$props2.token,
+            hasVerifiedEmail = _this$props2.hasVerifiedEmail;
+        var RenderedComponent = WrappedComponent;
+
+        if (!token) {
+          RenderedComponent = _pages_Login__WEBPACK_IMPORTED_MODULE_3__["default"];
+        } else if (!hasVerifiedEmail) {
+          RenderedComponent = _UnverifiedEmail__WEBPACK_IMPORTED_MODULE_6__["default"];
+        }
+
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(RenderedComponent, this.props);
       }
     }]);
@@ -66630,7 +66838,8 @@ function withUserAuthentication(WrappedComponent) {
 
   var mapStateToProps = function mapStateToProps(state) {
     return {
-      token: Object(_state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_2__["getUserToken"])(state)
+      token: Object(_state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_2__["getUserToken"])(state),
+      hasVerifiedEmail: Object(_state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_2__["hasVerifiedEmail"])(state)
     };
   };
 
@@ -66714,6 +66923,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_withUserAuthentication_hoc__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/withUserAuthentication.hoc */ "./resources/js/components/withUserAuthentication.hoc.js");
 /* harmony import */ var _state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../state/selectors/user.selectors */ "./resources/js/state/selectors/user.selectors.js");
 /* harmony import */ var _state_actions_food_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../state/actions/food.actions */ "./resources/js/state/actions/food.actions.js");
+/* harmony import */ var _components_DailyTargets__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/DailyTargets */ "./resources/js/components/DailyTargets.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66731,6 +66941,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -66758,8 +66969,14 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var user = this.props.user;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Welcome ", user.name);
+      var _this$props = this.props,
+          user = _this$props.user,
+          todaysFood = _this$props.todaysFood;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "home-page"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DailyTargets__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        food: todaysFood
+      }));
     }
   }]);
 
@@ -66767,8 +66984,11 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 var mapStateToProps = function mapStateToProps(state) {
+  var _state$food;
+
   return {
-    user: Object(_state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_3__["getActiveUser"])(state)
+    user: Object(_state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_3__["getActiveUser"])(state),
+    todaysFood: state === null || state === void 0 ? void 0 : (_state$food = state.food) === null || _state$food === void 0 ? void 0 : _state$food.todaysFood
   };
 };
 
@@ -66905,9 +67125,7 @@ function (_Component) {
           email = _this$state3.email,
           password = _this$state3.password,
           errors = _this$state3.errors;
-      var _this$props = this.props,
-          hasFailedLogin = _this$props.hasFailedLogin,
-          hasUnverifiedEmail = _this$props.hasUnverifiedEmail;
+      var hasFailedLogin = this.props.hasFailedLogin;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "login-page"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -66934,12 +67152,7 @@ function (_Component) {
         style: {
           marginTop: '10px'
         }
-      }, "Username and password combination is incorrect"), hasUnverifiedEmail && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "has-text-danger",
-        style: {
-          marginTop: '10px'
-        }
-      }, "This email address is unverified, please verify your email before logging in."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }, "Username and password combination is incorrect"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         style: {
           marginTop: '10px'
         }
@@ -66953,18 +67166,15 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 Login.propTypes = {
-  hasFailedLogin: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool.isRequired,
-  hasUnverifiedEmail: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool.isRequired
+  hasFailedLogin: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool.isRequired
 };
 Login.defaultProps = {
-  hasFailedLogin: false,
-  hasUnverifiedEmail: false
+  hasFailedLogin: false
 };
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    hasFailedLogin: Object(_state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_8__["hasFailedLogin"])(state),
-    hasUnverifiedEmail: Object(_state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_8__["hasUnverifiedEmail"])(state)
+    hasFailedLogin: Object(_state_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_8__["hasFailedLogin"])(state)
   };
 };
 
@@ -66984,10 +67194,21 @@ var mapDispatchToProps = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Register; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _components_form_TextBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/form/TextBox */ "./resources/js/components/form/TextBox.js");
+/* harmony import */ var react_bulma_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bulma-components */ "./node_modules/react-bulma-components/dist/index.js");
+/* harmony import */ var react_bulma_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_bulma_components__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _state_actions_user_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../state/actions/user.actions */ "./resources/js/state/actions/user.actions.js");
+/* harmony import */ var _utilities_validation_utility__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utilities/validation.utility */ "./resources/js/utilities/validation.utility.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _components_UnverifiedEmail__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/UnverifiedEmail */ "./resources/js/components/UnverifiedEmail.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -66997,9 +67218,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -67007,28 +67228,177 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
+
+
+
+
+
+var FIELDS = {
+  NAME: 'name',
+  EMAIL: 'email',
+  PASSWORD: 'password',
+  CONFIRMED_PASSWORD: 'confirmedPassword'
+};
+
 var Register =
 /*#__PURE__*/
 function (_Component) {
   _inherits(Register, _Component);
 
-  function Register() {
+  function Register(props) {
+    var _this$state;
+
+    var _this;
+
     _classCallCheck(this, Register);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Register).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Register).call(this, props));
+    _this.state = (_this$state = {}, _defineProperty(_this$state, FIELDS.NAME, ''), _defineProperty(_this$state, FIELDS.EMAIL, ''), _defineProperty(_this$state, FIELDS.PASSWORD, ''), _defineProperty(_this$state, FIELDS.CONFIRMED_PASSWORD, ''), _defineProperty(_this$state, "errors", {}), _this$state);
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Register, [{
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      var _this$state2 = this.state,
+          name = _this$state2.name,
+          email = _this$state2.email,
+          password = _this$state2.password;
+
+      if (this.formIsValid()) {
+        this.props.register(name, email, password);
+      }
+    }
+  }, {
+    key: "handleInputChange",
+    value: function handleInputChange(value, field) {
+      this.setState(_defineProperty({}, field, value));
+    }
+  }, {
+    key: "formIsValid",
+    value: function formIsValid() {
+      var errors = {};
+      var _this$state3 = this.state,
+          name = _this$state3.name,
+          email = _this$state3.email,
+          password = _this$state3.password,
+          confirmedPassword = _this$state3.confirmedPassword;
+
+      if (!name || name.length < 2) {
+        errors.name = 'Enter a valid name';
+      }
+
+      if (!email || !Object(_utilities_validation_utility__WEBPACK_IMPORTED_MODULE_6__["isValidEmail"])(email)) {
+        errors.email = 'Enter a valid email';
+      }
+
+      if (!password || !Object(_utilities_validation_utility__WEBPACK_IMPORTED_MODULE_6__["isValidPassword"])(password)) {
+        errors.password = 'Enter a valid password';
+      }
+
+      if (!confirmedPassword || !Object(_utilities_validation_utility__WEBPACK_IMPORTED_MODULE_6__["isValidPassword"])(password)) {
+        errors.confirmedPassword = 'Enter a valid password';
+      }
+
+      if (confirmedPassword !== password) {
+        errors.password = 'Passwords do not match';
+      }
+
+      this.setState({
+        errors: errors
+      });
+      return Object.keys(errors).length === 0;
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Registration page");
+      var _this2 = this;
+
+      var _this$state4 = this.state,
+          errors = _this$state4.errors,
+          name = _this$state4.name,
+          email = _this$state4.email,
+          password = _this$state4.password,
+          confirmedPassword = _this$state4.confirmedPassword;
+      var _this$props = this.props,
+          registeredSuccessfully = _this$props.registeredSuccessfully,
+          registeredEmail = _this$props.registeredEmail;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "registration-page"
+      }, registeredSuccessfully && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UnverifiedEmail__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        title: "Registration successful"
+      }), !registeredSuccessfully && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "title is-2"
+      }, "Register"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "login-form",
+        onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_form_TextBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        value: name,
+        error: errors === null || errors === void 0 ? void 0 : errors.name,
+        onChange: function onChange(value) {
+          return _this2.handleInputChange(value, FIELDS.NAME);
+        },
+        label: "Full name"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_form_TextBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        value: email,
+        error: errors === null || errors === void 0 ? void 0 : errors.email,
+        onChange: function onChange(value) {
+          return _this2.handleInputChange(value, FIELDS.EMAIL);
+        },
+        label: "Email address"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_form_TextBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        type: "password",
+        value: password,
+        error: errors === null || errors === void 0 ? void 0 : errors.password,
+        onChange: function onChange(value) {
+          return _this2.handleInputChange(value, FIELDS.PASSWORD);
+        },
+        label: "Password"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "is-size-6"
+      }, "Password rules:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "is-size-7",
+        style: {
+          marginBottom: '10px'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Must be at least 8 characters long"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Can contain these symbols: $ # @ *")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_form_TextBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        type: "password",
+        value: confirmedPassword,
+        error: errors === null || errors === void 0 ? void 0 : errors.confirmedPassword,
+        onChange: function onChange(value) {
+          return _this2.handleInputChange(value, FIELDS.CONFIRMED_PASSWORD);
+        },
+        label: "Confirm password"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bulma_components__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+        color: "primary"
+      }, "Register"))));
     }
   }]);
 
   return Register;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
+Register.propTypes = {
+  registeredEmail: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
 
+var mapStateToProps = function mapStateToProps(state) {
+  var _state$user, _state$user2;
+
+  return {
+    registeredEmail: state === null || state === void 0 ? void 0 : (_state$user = state.user) === null || _state$user === void 0 ? void 0 : _state$user.email,
+    registeredSuccessfully: state === null || state === void 0 ? void 0 : (_state$user2 = state.user) === null || _state$user2 === void 0 ? void 0 : _state$user2.registeredSuccessfully
+  };
+};
+
+var mapDispatchToProps = {
+  register: _state_actions_user_actions__WEBPACK_IMPORTED_MODULE_5__["register"]
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Register));
 
 /***/ }),
 
@@ -67124,7 +67494,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var routes = {
   LOGIN: '/login',
-  VALIDATE_TOKEN: '/validate-token?token={token}'
+  REGISTER: '/register',
+  VALIDATE_TOKEN: '/validate-token?token={token}',
+  RESEND_EMAIL_VERIFICATION: '/resend-email-verification'
 };
 /**
  * Makes request to log in user with username/password
@@ -67137,9 +67509,11 @@ function login(_x, _x2) {
   return _login.apply(this, arguments);
 }
 /**
- * Validates an auth token
- * @param {string} token - token to validate
- * @return {Promise}
+ * Registers a new user
+ * @param {string} name - users name
+ * @param {string} email - users email
+ * @param {string} password - users password
+ * @returns {Promise}
  */
 
 
@@ -67168,38 +67542,107 @@ function _login() {
   return _login.apply(this, arguments);
 }
 
-function validateToken(_x3) {
-  return _validateToken.apply(this, arguments);
+function register(_x3, _x4, _x5) {
+  return _register.apply(this, arguments);
 }
+/**
+ * Validates an auth token
+ * @param {string} token - token to validate
+ * @return {Promise}
+ */
 
-function _validateToken() {
-  _validateToken = _asyncToGenerator(
+
+function _register() {
+  _register = _asyncToGenerator(
   /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(token) {
-    var url, finalUrl;
+  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(name, email, password) {
+    var url;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            url = "/api".concat(routes.VALIDATE_TOKEN);
-            finalUrl = Object(_utilities_service_utility__WEBPACK_IMPORTED_MODULE_2__["replaceUrlParams"])(url, {
-              token: token
-            });
-            return _context2.abrupt("return", _utilities_http_utility__WEBPACK_IMPORTED_MODULE_1__["default"].get(finalUrl));
+            url = "/api".concat(routes.REGISTER);
+            return _context2.abrupt("return", _utilities_http_utility__WEBPACK_IMPORTED_MODULE_1__["default"].post(url, {
+              name: name,
+              email: email,
+              password: password
+            }));
 
-          case 3:
+          case 2:
           case "end":
             return _context2.stop();
         }
       }
     }, _callee2);
   }));
+  return _register.apply(this, arguments);
+}
+
+function validateToken(_x6) {
   return _validateToken.apply(this, arguments);
+}
+/**
+ * Resends verification email
+ * @return {Promise}
+ */
+
+
+function _validateToken() {
+  _validateToken = _asyncToGenerator(
+  /*#__PURE__*/
+  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(token) {
+    var url, finalUrl;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            url = "/api".concat(routes.VALIDATE_TOKEN);
+            finalUrl = Object(_utilities_service_utility__WEBPACK_IMPORTED_MODULE_2__["replaceUrlParams"])(url, {
+              token: token
+            });
+            return _context3.abrupt("return", _utilities_http_utility__WEBPACK_IMPORTED_MODULE_1__["default"].get(finalUrl));
+
+          case 3:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+  return _validateToken.apply(this, arguments);
+}
+
+function resendEmailVerification() {
+  return _resendEmailVerification.apply(this, arguments);
+}
+
+function _resendEmailVerification() {
+  _resendEmailVerification = _asyncToGenerator(
+  /*#__PURE__*/
+  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+    var url;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            url = "/api".concat(routes.RESEND_EMAIL_VERIFICATION);
+            return _context4.abrupt("return", _utilities_http_utility__WEBPACK_IMPORTED_MODULE_1__["default"].post(url));
+
+          case 2:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4);
+  }));
+  return _resendEmailVerification.apply(this, arguments);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   login: login,
-  validateToken: validateToken
+  register: register,
+  validateToken: validateToken,
+  resendEmailVerification: resendEmailVerification
 });
 
 /***/ }),
@@ -67249,7 +67692,9 @@ var prefix = 'user/';
 /* harmony default export */ __webpack_exports__["default"] = ({
   SET_USER: "".concat(prefix, "set-user"),
   SET_FAILED_LOGIN: "".concat(prefix, "failed-login"),
-  SET_UNVERIFIED_EMAIL: "".concat(prefix, "set-unverified-email")
+  SET_UNVERIFIED_EMAIL: "".concat(prefix, "set-unverified-email"),
+  SET_REGISTERED_SUCCESSFULLY: "".concat(prefix, "set-registered-successfully"),
+  SET_EMAIL_VERIFICATION_RESENT: "".concat(prefix, "set-email-verification-resent")
 });
 
 /***/ }),
@@ -67355,16 +67800,20 @@ function togglePrimaryMenu() {
 /*!****************************************************!*\
   !*** ./resources/js/state/actions/user.actions.js ***!
   \****************************************************/
-/*! exports provided: setUser, login, validateToken, setFailedLogin, setUnverifiedEmail */
+/*! exports provided: setUser, login, register, validateToken, resendEmailVerification, setRegisteredSuccessfully, setFailedLogin, setUnverifiedEmail, setEmailVerificationResent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setUser", function() { return setUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "register", function() { return register; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateToken", function() { return validateToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resendEmailVerification", function() { return resendEmailVerification; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setRegisteredSuccessfully", function() { return setRegisteredSuccessfully; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setFailedLogin", function() { return setFailedLogin; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setUnverifiedEmail", function() { return setUnverifiedEmail; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setEmailVerificationResent", function() { return setEmailVerificationResent; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _actionTypes_user_actionTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actionTypes/user.actionTypes */ "./resources/js/state/actionTypes/user.actionTypes.js");
@@ -67386,13 +67835,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
  * @param {string} payload.name - user's name
  * @param {string} payload.email - user's email
  * @param {string} payload.token - user's auth token
+ * @param {string} payload.hasVerifiedEmail - user's email verification status
  * @return {object}
  */
 
 function setUser(_ref) {
   var name = _ref.name,
       email = _ref.email,
-      token = _ref.token;
+      token = _ref.token,
+      hasVerifiedEmail = _ref.hasVerifiedEmail;
   // stores token in cookie
   Object(_utilities_auth_utility__WEBPACK_IMPORTED_MODULE_2__["setAuthToken"])(token);
   return {
@@ -67401,6 +67852,7 @@ function setUser(_ref) {
       name: name,
       email: email,
       token: token,
+      hasVerifiedEmail: hasVerifiedEmail,
       failedLogin: false
     }
   };
@@ -67420,7 +67872,7 @@ function login(email, password) {
       var _ref2 = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(dispatch) {
-        var result, token, name, _error$response, status;
+        var result, token, name, hasVerifiedEmail, _error$response, status;
 
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -67432,11 +67884,12 @@ function login(email, password) {
 
               case 3:
                 result = _context.sent;
-                token = result.token, name = result.name;
+                token = result.token, name = result.name, hasVerifiedEmail = result.hasVerifiedEmail;
                 dispatch(setUser({
                   name: name,
                   email: email,
-                  token: token
+                  token: token,
+                  hasVerifiedEmail: hasVerifiedEmail
                 }));
                 _context.next = 13;
                 break;
@@ -67469,6 +67922,62 @@ function login(email, password) {
   );
 }
 /**
+ * Registers a new user
+ * @param {string} name - new users name
+ * @param {string} email - new users email
+ * @param {string} password - new users password
+ * @returns {Function} - thunk
+ */
+
+function register(name, email, password) {
+  return (
+    /*#__PURE__*/
+    function () {
+      var _ref3 = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(dispatch) {
+        var result, hasVerifiedEmail, token;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.prev = 0;
+                _context2.next = 3;
+                return _services_user_service__WEBPACK_IMPORTED_MODULE_3__["default"].register(name, email, password);
+
+              case 3:
+                result = _context2.sent;
+                hasVerifiedEmail = result.hasVerifiedEmail, token = result.token;
+                dispatch(setUser({
+                  name: name,
+                  email: email,
+                  token: token,
+                  hasVerifiedEmail: hasVerifiedEmail
+                }));
+                dispatch(setRegisteredSuccessfully());
+                _context2.next = 12;
+                break;
+
+              case 9:
+                _context2.prev = 9;
+                _context2.t0 = _context2["catch"](0);
+                console.log(_context2.t0);
+
+              case 12:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, null, [[0, 9]]);
+      }));
+
+      return function (_x2) {
+        return _ref3.apply(this, arguments);
+      };
+    }()
+  );
+}
+/**
  * Validates locally stored auth token, if valid sets user in state
  * @param {string} token - stored auth token
  * @returns {Function} - thunk
@@ -67478,47 +67987,96 @@ function validateToken(token) {
   return (
     /*#__PURE__*/
     function () {
-      var _ref3 = _asyncToGenerator(
+      var _ref4 = _asyncToGenerator(
       /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(dispatch) {
-        var result, email, name;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(dispatch) {
+        var result, email, name, hasVerifiedEmail;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
           while (1) {
-            switch (_context2.prev = _context2.next) {
+            switch (_context3.prev = _context3.next) {
               case 0:
-                _context2.prev = 0;
-                _context2.next = 3;
+                _context3.prev = 0;
+                _context3.next = 3;
                 return _services_user_service__WEBPACK_IMPORTED_MODULE_3__["default"].validateToken(token);
 
               case 3:
-                result = _context2.sent;
-                email = result.email, name = result.name;
+                result = _context3.sent;
+                email = result.email, name = result.name, hasVerifiedEmail = result.hasVerifiedEmail;
                 dispatch(setUser({
                   name: name,
                   email: email,
-                  token: token
+                  token: token,
+                  hasVerifiedEmail: hasVerifiedEmail
                 }));
-                _context2.next = 11;
+                _context3.next = 11;
                 break;
 
               case 8:
-                _context2.prev = 8;
-                _context2.t0 = _context2["catch"](0);
-                console.log(_context2.t0);
+                _context3.prev = 8;
+                _context3.t0 = _context3["catch"](0);
+                console.log(_context3.t0);
 
               case 11:
               case "end":
-                return _context2.stop();
+                return _context3.stop();
             }
           }
-        }, _callee2, null, [[0, 8]]);
+        }, _callee3, null, [[0, 8]]);
       }));
 
-      return function (_x2) {
-        return _ref3.apply(this, arguments);
+      return function (_x3) {
+        return _ref4.apply(this, arguments);
       };
     }()
   );
+}
+function resendEmailVerification() {
+  return (
+    /*#__PURE__*/
+    function () {
+      var _ref5 = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4(dispatch) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                _context4.prev = 0;
+                _context4.next = 3;
+                return _services_user_service__WEBPACK_IMPORTED_MODULE_3__["default"].resendEmailVerification();
+
+              case 3:
+                dispatch(setEmailVerificationResent());
+                _context4.next = 9;
+                break;
+
+              case 6:
+                _context4.prev = 6;
+                _context4.t0 = _context4["catch"](0);
+                console.log(_context4.t0);
+
+              case 9:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4, null, [[0, 6]]);
+      }));
+
+      return function (_x4) {
+        return _ref5.apply(this, arguments);
+      };
+    }()
+  );
+}
+/**
+ * Sets registeredSuccessfully user state to true
+ */
+
+function setRegisteredSuccessfully() {
+  return {
+    type: _actionTypes_user_actionTypes__WEBPACK_IMPORTED_MODULE_1__["default"].SET_REGISTERED_SUCCESSFULLY
+  };
 }
 /**
  * Sets failedLogin user state to true
@@ -67536,6 +68094,15 @@ function setFailedLogin() {
 function setUnverifiedEmail() {
   return {
     type: _actionTypes_user_actionTypes__WEBPACK_IMPORTED_MODULE_1__["default"].SET_UNVERIFIED_EMAIL
+  };
+}
+/**
+ * Sets emailVerificationResent user state to true
+ */
+
+function setEmailVerificationResent() {
+  return {
+    type: _actionTypes_user_actionTypes__WEBPACK_IMPORTED_MODULE_1__["default"].SET_EMAIL_VERIFICATION_RESENT
   };
 }
 
@@ -67630,7 +68197,9 @@ var initialState = {
   name: '',
   email: '',
   failedLogin: false,
-  unverifiedEmail: false
+  hasVerifiedEmail: false,
+  registeredSuccessfully: false,
+  emailVerificationResent: false
 };
 
 function setUser(state, action) {
@@ -67650,6 +68219,18 @@ function setUnverifiedEmail(state) {
   });
 }
 
+function setRegisteredSuccessfully(state) {
+  return _objectSpread({}, state, {
+    registeredSuccessfully: true
+  });
+}
+
+function setEmailVerificationResent(state) {
+  return _objectSpread({}, state, {
+    emailVerificationResent: true
+  });
+}
+
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
@@ -67663,6 +68244,12 @@ function setUnverifiedEmail(state) {
 
     case _actionTypes_user_actionTypes__WEBPACK_IMPORTED_MODULE_0__["default"].SET_UNVERIFIED_EMAIL:
       return setUnverifiedEmail(state);
+
+    case _actionTypes_user_actionTypes__WEBPACK_IMPORTED_MODULE_0__["default"].SET_REGISTERED_SUCCESSFULLY:
+      return setRegisteredSuccessfully(state);
+
+    case _actionTypes_user_actionTypes__WEBPACK_IMPORTED_MODULE_0__["default"].SET_EMAIL_VERIFICATION_RESENT:
+      return setEmailVerificationResent(state);
 
     default:
       return state;
@@ -67691,14 +68278,14 @@ var getMenuIsOpen = function getMenuIsOpen(state) {
 /*!********************************************************!*\
   !*** ./resources/js/state/selectors/user.selectors.js ***!
   \********************************************************/
-/*! exports provided: getUserToken, hasFailedLogin, hasUnverifiedEmail, getActiveUser, getIsLoggedIn */
+/*! exports provided: getUserToken, hasFailedLogin, hasVerifiedEmail, getActiveUser, getIsLoggedIn */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUserToken", function() { return getUserToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasFailedLogin", function() { return hasFailedLogin; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasUnverifiedEmail", function() { return hasUnverifiedEmail; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasVerifiedEmail", function() { return hasVerifiedEmail; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getActiveUser", function() { return getActiveUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getIsLoggedIn", function() { return getIsLoggedIn; });
 /* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reselect */ "./node_modules/reselect/es/index.js");
@@ -67713,10 +68300,10 @@ var hasFailedLogin = function hasFailedLogin(state) {
 
   return state === null || state === void 0 ? void 0 : (_state$user2 = state.user) === null || _state$user2 === void 0 ? void 0 : _state$user2.failedLogin;
 };
-var hasUnverifiedEmail = function hasUnverifiedEmail(state) {
+var hasVerifiedEmail = function hasVerifiedEmail(state) {
   var _state$user3;
 
-  return state === null || state === void 0 ? void 0 : (_state$user3 = state.user) === null || _state$user3 === void 0 ? void 0 : _state$user3.unverifiedEmail;
+  return state === null || state === void 0 ? void 0 : (_state$user3 = state.user) === null || _state$user3 === void 0 ? void 0 : _state$user3.hasVerifiedEmail;
 };
 var getActiveUser = function getActiveUser(state) {
   return state === null || state === void 0 ? void 0 : state.user;
@@ -67766,6 +68353,39 @@ function getAuthToken() {
   setAuthToken: setAuthToken,
   getAuthToken: getAuthToken
 });
+
+/***/ }),
+
+/***/ "./resources/js/utilities/food.utility.js":
+/*!************************************************!*\
+  !*** ./resources/js/utilities/food.utility.js ***!
+  \************************************************/
+/*! exports provided: getMacroTotals */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMacroTotals", function() { return getMacroTotals; });
+/**
+ * Returns
+ * @param {array} food - array of food objects
+ * @returns {object} { calories: Number, protein: Number, fat: Number, carbohydrates: Number }
+ */
+function getMacroTotals(food) {
+  var totals = {
+    calories: 0,
+    protein: 0,
+    fat: 0,
+    carbohydrates: 0
+  };
+  food.forEach(function (food) {
+    totals.calories += food.calories;
+    totals.protein += food.protein;
+    totals.fat += food.fat;
+    totals.carbohydrates += food.carbohydrates;
+  });
+  return totals;
+}
 
 /***/ }),
 
@@ -67929,15 +68549,21 @@ function replaceUrlParams(url, params) {
 /*!******************************************************!*\
   !*** ./resources/js/utilities/validation.utility.js ***!
   \******************************************************/
-/*! exports provided: isValidEmail */
+/*! exports provided: isValidEmail, isValidPassword */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidEmail", function() { return isValidEmail; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidPassword", function() { return isValidPassword; });
 var isValidEmail = function isValidEmail(email) {
   var regex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   return regex.test(email.toLowerCase());
+};
+var isValidPassword = function isValidPassword(password) {
+  var PASSWORD_MIN_LENGTH = 8;
+  var regex = /^[A-Za-z0-9\&\@\$\*]+$/g;
+  return regex.test(password) && password.length >= PASSWORD_MIN_LENGTH;
 };
 
 /***/ }),

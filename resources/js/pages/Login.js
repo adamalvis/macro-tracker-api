@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { Button } from 'react-bulma-components';
 import { isValidEmail } from '../utilities/validation.utility';
 import { login } from '../state/actions/user.actions';
-import { hasFailedLogin, hasUnverifiedEmail } from '../state/selectors/user.selectors';
+import { hasFailedLogin } from '../state/selectors/user.selectors';
 
 class Login extends Component {
   constructor(props) {
@@ -61,7 +61,7 @@ class Login extends Component {
 
   render() {
     const { email, password, errors } = this.state;
-    const { hasFailedLogin, hasUnverifiedEmail } = this.props;
+    const { hasFailedLogin } = this.props;
 
     return (
       <div className="login-page">
@@ -90,14 +90,6 @@ class Login extends Component {
               Username and password combination is incorrect
             </p>
           )}
-          {hasUnverifiedEmail && (
-            <p
-              className="has-text-danger"
-              style={{ marginTop: '10px' }}
-            >
-              This email address is unverified, please verify your email before logging in.
-            </p>
-          )}
           <p style={{ marginTop: '10px' }}>Don't have an account? <Link to="/register">Register now</Link></p>
         </form>
       </div>
@@ -107,17 +99,14 @@ class Login extends Component {
 
 Login.propTypes = {
   hasFailedLogin: PropTypes.bool.isRequired,
-  hasUnverifiedEmail: PropTypes.bool.isRequired,
 };
 
 Login.defaultProps = {
   hasFailedLogin: false,
-  hasUnverifiedEmail: false,
 };
 
 const mapStateToProps = state => ({
   hasFailedLogin: hasFailedLogin(state),
-  hasUnverifiedEmail: hasUnverifiedEmail(state),
 });
 
 const mapDispatchToProps = {
