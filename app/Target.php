@@ -13,6 +13,10 @@ class Target extends Model
         'fat',
         'carbohydrates',
         'user_id',
+        'is_updated',
+    ];
+    protected $attributes = [
+        'is_updated' => false,
     ];
 
     public static function createDefaultTargetForUser(User $user)

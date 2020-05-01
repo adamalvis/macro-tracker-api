@@ -34,10 +34,11 @@ class TargetController extends Controller
         $target->protein = $data['protein'];
         $target->fat = $data['fat'];
         $target->carbohydrates = $data['carbohydrates'];
+        $target->is_updated = true;
 
         $target->save();
 
-        return $target;
+        return $this->formatTargetResponse($target);
     }
 
     /**
@@ -48,6 +49,19 @@ class TargetController extends Controller
         $user = Auth::user();
         $target = Target::where('user_id', $user->id)->first();
 
-        return $target;
+        return $this->formatTargetResponse($target);
+    }
+
+    /**
+     * Returns formatted target response
+     */
+    private function formatTargetResponse($target) {
+        return [
+            'calories' => $target->calories,
+            'protein' => $target->protein,
+            'fat' => $target->fat,
+            'carbohydrates' => $target->carbohydrates,
+            'isUpdated' => $target->is_updated,
+        ];
     }
 }

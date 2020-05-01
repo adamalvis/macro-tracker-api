@@ -11,11 +11,11 @@ export function getMacroTotals(food) {
     carbohydrates: 0,
   };
 
-  food.forEach((food) => {
-    totals.calories += food.calories;
-    totals.protein += food.protein;
-    totals.fat += food.fat;
-    totals.carbohydrates += food.carbohydrates;
+  food.forEach((item) => {
+    totals.calories += item.calories;
+    totals.protein += item.protein;
+    totals.fat += item.fat;
+    totals.carbohydrates += item.carbohydrates;
   });
 
   return totals;

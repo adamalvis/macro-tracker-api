@@ -21,6 +21,6 @@ Route::middleware('auth:api')->group(function () {
     Route::resource('food', 'FoodController');
     Route::post('/resend-email-verification', 'Auth\RegisterController@resendEmailVerification');
 
-    Route::get('/target', 'TargetController@getForUser');
-    Route::patch('/target', 'TargetController@updateForUser');
+    Route::get('/targets', 'TargetController@getForUser');
+    Route::patch('/targets', 'TargetController@updateForUser');
 });

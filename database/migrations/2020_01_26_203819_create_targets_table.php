@@ -20,6 +20,7 @@ class CreateTargetsTable extends Migration
             $table->integer('fat');
             $table->integer('carbohydrates');
             $table->unsignedBigInteger('user_id');
+            $table->boolean('is_updated');
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users');

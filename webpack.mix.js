@@ -18,4 +18,5 @@ mix.react('resources/js/index.js', 'public/js/app.js')
       plugins: [
           new LiveReloadPlugin()
       ]
-   });
+   })
+   .sourceMaps();
