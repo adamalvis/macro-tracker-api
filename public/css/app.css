@@ -1499,3 +1499,52 @@ a.has-text-danger:focus {
   padding-top: 65px;
 }
 
+.target-block {
+  width: 100%;
+  background: #DBDBDB;
+  position: relative;
+  overflow: hidden;
+}
+
+.target-block:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.target-block .fill {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: #209CEE;
+  width: 100%;
+}
+
+.target-block .content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.target-block .content p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36pt;
+  color: #fff;
+  line-height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.target-block .content p span {
+  display: block;
+  font-size: 15pt;
+  font-weight: 400;
+}
+

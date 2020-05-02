@@ -1,5 +1,7 @@
 @import "~react-bulma-components/src/index.sass";
 
+@import "./variables";
 @import "./components/_primaryNav.scss";
 @import "./components/_primaryMenu.scss";
 @import "./components/_containers.scss";
+@import "./components/_target-block.scss";
