@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Notification } from 'react-bulma-components';
+import { Notification, Button } from 'react-bulma-components';
+import { removeNotification } from '../state/actions/notifications.actions';
 
 class Notifications extends Component {
+  handleRemoveClick(id) {
+    this.props.removeNotification(id);
+  }
+
   render() {
     const { msgs } = this.props;
 
@@ -12,6 +17,7 @@ class Notifications extends Component {
         {msgs.length > 0 && msgs.map(msg => (
           <Notification color={msg.color}>
             {msg.text}
+            <Button remove onClick={() => this.handleRemoveClick(msg.id)} />
           </Notification>
         ))}
       </div>
@@ -35,4 +41,8 @@ const mapStateToProps = state => ({
   msgs: state?.notifications?.msgs,
 });
 
-export default connect(mapStateToProps)(Notifications);
+const mapDispatchToProps = {
+  removeNotification,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Notifications);
