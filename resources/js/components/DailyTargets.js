@@ -13,18 +13,18 @@ class DailyTargets extends Component {
         <h2 className="is-size-2" style={{ marginBottom: '10px' }}>Daily Report</h2>
         <div className="columns is-mobile">
           <div className="column">
-            <TargetBlock consumed={totals.calories} target={targets.calories} />
+            <TargetBlock consumed={totals.calories} target={targets.calories} title="Calories" />
           </div>
           <div className="column">
-            <TargetBlock consumed={totals.protein} target={targets.protein} />
+            <TargetBlock consumed={totals.protein} target={targets.protein} title="Protein" />
           </div>
         </div>
         <div className="columns is-mobile">
           <div className="column">
-            <TargetBlock consumed={totals.fat} target={targets.fat} />
+            <TargetBlock consumed={totals.fat} target={targets.fat} title="Fat" />
           </div>
           <div className="column">
-            <TargetBlock consumed={totals.carbohydrates} target={targets.carbohydrates} />
+            <TargetBlock consumed={totals.carbohydrates} target={targets.carbohydrates} title="Carbohydrates" />
           </div>
         </div>
       </div>

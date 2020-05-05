@@ -18,13 +18,14 @@ class TargetBlock extends Component {
   }
 
   render() {
-    const { consumed, target } = this.props;
+    const { consumed, target, title } = this.props;
     const fillStyles = this.getFillStyles();
 
     return (
       <div className="target-block">
         <div className="fill" style={fillStyles}></div>
         <div className="content">
+          <h6>{title}</h6>
           <p>
             {consumed}
             <span>of {target}</span>
@@ -38,6 +39,7 @@ class TargetBlock extends Component {
 TargetBlock.propTypes = {
   consumed: PropTypes.number.isRequired,
   target: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default TargetBlock;
