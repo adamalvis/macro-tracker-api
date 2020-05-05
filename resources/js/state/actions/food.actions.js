@@ -6,6 +6,7 @@ import { COLOR_NAMES } from '../../constants/colors';
 
 /**
  * Loads all food items for the current day
+ * @returns {Function} thunk
  */
 export function loadTodaysFood() {
   return async (dispatch) => {
