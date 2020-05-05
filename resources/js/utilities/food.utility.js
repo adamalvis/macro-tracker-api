@@ -33,3 +33,21 @@ export function getCategoriesAsOptions() {
     value: categoryId.toString(),
   }));
 }
+
+export function getCategorizedFood(food) {
+  const categorizedFood = {
+    [CATEGORIES.BREAKFAST]: [],
+    [CATEGORIES.LUNCH]: [],
+    [CATEGORIES.DINNER]: [],
+    [CATEGORIES.SNACK]: [],
+  };
+
+  food.forEach((item) => {
+    categorizedFood[item.category] = [
+      ...categorizedFood[item.category],
+      item,
+    ];
+  });
+
+  return categorizedFood;
+}

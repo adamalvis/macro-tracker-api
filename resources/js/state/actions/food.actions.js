@@ -58,3 +58,24 @@ export function addFood({
     }
   };
 }
+
+/**
+ * Removes a food item by id
+ * @param {string} id - food id
+ * @returns {Function} - thunk
+ */
+export function removeFood(id) {
+  return async (dispatch) => {
+    try {
+      await foodService.remove(id);
+      dispatch({
+        type: actionTypes.REMOVE_FOOD,
+        id,
+      });
+      dispatch(showNotification('Food item removed'))
+    } catch (error) {
+      dispatch(showError(error));
+      throw error;
+    }
+  };
+}

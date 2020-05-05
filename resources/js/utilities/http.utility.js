@@ -22,7 +22,7 @@ async function get(url, config = {}) {
 /**
  * Performs a POST request to specified url
  * @param {string} url - url to POST to
- * @param {object} data - POST params
+ * @param {object} data - payload
  * @param {object} config - configuration object
  * @returns {Promise}
  */
@@ -31,8 +31,33 @@ async function post(url, data, config = {}) {
   return result?.data;
 }
 
+/**
+ * Makes a PATCH request to specified url
+ * @param {string} url - url to PATCH to
+ * @param {object} data - payload
+ * @param {object} config - configuration object
+ * @return {Promise}
+ */
+async function patch(url, data, config = {}) {
+  const result = await axios.patch(url, data, config);
+  return result?.data;
+}
+
+/**
+ * Performs a DELETE request to specified url
+ * @param {string} url - url to DELETE to
+ * @param {data} config - configuration object
+ * @return {Promise}
+ */
+async function deleteRequest(url, config = {}) {
+  const result = await axios.delete(url, config);
+  return result?.data;
+}
+
 export default {
   get,
   post,
+  patch,
+  delete: deleteRequest,
   setAuthToken,
 };

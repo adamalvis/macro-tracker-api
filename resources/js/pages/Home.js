@@ -6,6 +6,7 @@ import { loadTodaysFood } from '../state/actions/food.actions';
 import DailyTargets from '../components/DailyTargets';
 import { loadTargets } from '../state/actions/targets.actions';
 import AddFoodButton from '../components/AddFoodButton';
+import FoodCategories from '../components/FoodCategories';
 
 class Home extends Component {
   componentDidMount() {
@@ -38,6 +39,7 @@ class Home extends Component {
           targets={targets}
           food={todaysFood}
         />
+        <FoodCategories food={todaysFood} />
         <AddFoodButton onClick={this.handleAddFoodButtonClick} />
       </div>
     );

@@ -1441,7 +1441,7 @@ a.has-text-danger:focus {
 }
 
 .primary-nav.navbar {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -1465,7 +1465,7 @@ a.has-text-danger:focus {
 }
 
 .primary-menu {
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: -300px;
   width: 300px;
@@ -1516,7 +1516,7 @@ a.has-text-danger:focus {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  background-color: #209CEE;
+  background-color: #00D1B2;
   width: 100%;
 }
 
@@ -1526,6 +1526,15 @@ a.has-text-danger:focus {
   left: 0px;
   width: 100%;
   height: 100%;
+}
+
+.target-block .content h6 {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: #fff;
+  font-size: 9pt;
+  margin: 0;
 }
 
 .target-block .content p {
@@ -1566,5 +1575,22 @@ a.has-text-danger:focus {
   bottom: 15px;
   left: 0px;
   padding: 0px 15px;
+}
+
+.food-categories .card .card-content .list .list-item {
+  position: relative;
+}
+
+.food-categories .card .card-content .list .list-item span {
+  width: 100%;
+  padding-right: 50px;
+}
+
+.food-categories .card .card-content .list .list-item button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 

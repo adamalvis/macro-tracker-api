@@ -5,6 +5,7 @@ const routes = {
   ALL: '/food',
   FOOD_BY_DAY: '/food?date={date}',
   CREATE: '/food',
+  REMOVE: '/food/{id}',
 };
 
 /**
@@ -42,7 +43,20 @@ export async function create({
   });
 }
 
+/**
+ * Removes a food item by id
+ * @param {string} id - food id
+ * @returns {Promise}
+ */
+export async function remove(id) {
+  const fullRoute = replaceUrlParams(routes.REMOVE, { id });
+  const url = `/api${fullRoute}`;
+
+  return http.delete(url);
+}
+
 export default {
   foodByDay,
   create,
+  remove,
 };

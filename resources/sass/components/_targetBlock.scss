@@ -14,7 +14,7 @@
     position: absolute;
     bottom: 0px;
     left: 0px;
-    background-color: $info;
+    background-color: $primary;
     width: 100%;
   }
 
@@ -27,10 +27,11 @@
 
     h6 {
       position: absolute;
-      top: 5px;
+      bottom: 5px;
       left: 5px;
       color: #fff;
       font-size: 9pt;
+      margin: 0;
     }
 
     p {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import colors from '../constants/colors';
 
 class TargetBlock extends Component {
   getFillStyles() {
@@ -10,15 +9,11 @@ class TargetBlock extends Component {
 
     styles.height = `${consumedPercentage}%`;
 
-    if (consumedPercentage > 100) {
-      styles.backgroundColor = colors.DANGER;
-    }
-
     return styles;
   }
 
   render() {
-    const { consumed, target, title } = this.props;
+    const { consumed, target, title, unit } = this.props;
     const fillStyles = this.getFillStyles();
 
     return (
@@ -28,11 +23,11 @@ class TargetBlock extends Component {
           <h6>{title}</h6>
           <p>
             {consumed}
-            <span>of {target}</span>
+            <span>of {`${target}${unit}`}</span>
           </p>
         </div>
       </div>
-    )
+    );
   }
 }
 
@@ -40,6 +35,11 @@ TargetBlock.propTypes = {
   consumed: PropTypes.number.isRequired,
   target: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
+  unit: PropTypes.string,
+};
+
+TargetBlock.defaultProps = {
+  unit: '',
 };
 
 export default TargetBlock;
