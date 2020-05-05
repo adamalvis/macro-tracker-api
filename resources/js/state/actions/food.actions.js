@@ -41,10 +41,10 @@ export function addFood({
       const newFoodItem = await foodService.create({
         name,
         category,
-        calories,
-        protein,
-        fat,
-        carbohydrates,
+        calories: parseInt(calories),
+        protein: parseInt(protein),
+        fat: parseInt(fat),
+        carbohydrates: parseInt(carbohydrates),
       });
   
       dispatch({

@@ -12,6 +12,8 @@ function loadTodaysFood(state, action) {
 function addFood(state, action) {
   const { food } = action;
 
+  console.log({ food })
+
   return {
     ...state,
     todaysFood: [
