@@ -1,3 +1,12 @@
+export const COLOR_NAMES = {
+  PRIMARY: 'primary',
+  INFO: 'info',
+  LINK: 'link',
+  SUCCESS: 'success',
+  WARNING: 'warning',
+  DANGER: 'danger',
+}
+
 export default {
   PRIMARY: '#00D1B2',
   INFO: '#209CEE',

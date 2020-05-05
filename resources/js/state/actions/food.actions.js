@@ -1,6 +1,8 @@
 import moment from 'moment';
 import actionTypes from '../actionTypes/food.actionTypes';
 import foodService from '../../services/food.service';
+import { showError, showNotification } from './notifications.actions';
+import { COLOR_NAMES } from '../../constants/colors';
 
 /**
  * Loads all food items for the current day
@@ -16,7 +18,7 @@ export function loadTodaysFood() {
         todaysFood,
       });
     } catch (error) {
-      console.log(error);
+      dispatch(showError(error));
     }
   };
 }
@@ -49,8 +51,9 @@ export function addFood({
         type: actionTypes.ADD_FOOD,
         food: newFoodItem,
       });
+      dispatch(showNotification('Food item added', COLOR_NAMES.SUCCESS));
     } catch (error) {
-      console.log(error);
+      dispatch(showError(error));
     }
   };
 }

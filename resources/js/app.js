@@ -8,6 +8,7 @@ import PrimaryMenu from './components/PrimaryMenu';
 import PrimaryNav from './components/PrimaryNav';
 import rootReducer from './state/reducers';
 import { PAGES } from './constants/navigation';
+import Notifications from './components/Notifications';
 
 import 'react-bulma-components/dist/react-bulma-components.min.css';
 
@@ -33,6 +34,7 @@ class App extends Component {
                   </Switch>
                 </Container>
               </Section>
+              <Notifications />
             </div>
           </BrowserRouter>
         </Provider>

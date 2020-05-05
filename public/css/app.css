@@ -1558,3 +1558,13 @@ a.has-text-danger:focus {
   margin-right: 5px;
 }
 
+.notification-pane {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  z-index: 999;
+  bottom: 15px;
+  left: 0px;
+  padding: 0px 15px;
+}
+
