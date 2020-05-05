@@ -12,15 +12,9 @@ class PrimaryMenu extends Component {
     return (
       <Menu className={classNames('primary-menu', { open: isOpen })}>
         <Menu.List>
-          <Menu.List.Item>
-            <i className="fa fa-calendar" aria-hidden="true"></i> Last 7 days
-          </Menu.List.Item>
-          <Menu.List.Item>
-            <i className="fa fa-bullseye" aria-hidden="true"></i> Targets
-          </Menu.List.Item>
-          <Menu.List.Item>
-            <i className="fa fa-cog" aria-hidden="true"></i> Settings
-          </Menu.List.Item>
+          <Menu.List.Item><i className="fa fa-calendar" aria-hidden="true"></i> Last 7 days</Menu.List.Item>
+          <Menu.List.Item><i className="fa fa-bullseye" aria-hidden="true"></i> Targets</Menu.List.Item>
+          <Menu.List.Item><i className="fa fa-cog" aria-hidden="true"></i> Settings</Menu.List.Item>
         </Menu.List>
       </Menu>
     );

@@ -9,15 +9,13 @@ class TextBox extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleEnter(e) {
-    console.log({ e })
-  }
-
   handleChange(e) {
     const { onChange } = this.props;
     const { value } = e.target;
 
-    onChange(value);
+    if (typeof onChange === 'function') {
+      onChange(value);
+    }
   }
 
   render() {
@@ -40,12 +38,15 @@ class TextBox extends Component {
           )}
         </Form.Control>
       </Form.Field>
-    )
+    );
   }
 }
 
 TextBox.propTypes = {
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
   onChange: PropTypes.func,
   onEnter: PropTypes.func,
   error: PropTypes.string,

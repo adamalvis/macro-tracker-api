@@ -1,3 +1,5 @@
+import { CATEGORIES, CATEGORY_LABELS } from "../constants/food";
+
 /**
  * Returns
  * @param {array} food - array of food objects
@@ -19,4 +21,15 @@ export function getMacroTotals(food) {
   });
 
   return totals;
+}
+
+/**
+ * Returns all food categories formatted as <Select> options
+ * @returns {array}
+ */
+export function getCategoriesAsOptions() {
+  return Object.values(CATEGORIES).map(categoryId => ({
+    label: CATEGORY_LABELS[categoryId],
+    value: categoryId.toString(),
+  }));
 }

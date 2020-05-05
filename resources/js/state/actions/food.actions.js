@@ -20,3 +20,37 @@ export function loadTodaysFood() {
     }
   };
 }
+
+/**
+ * Action to add a new food item
+ * @param {object} payload
+ * @param {string} payload.name - item name
+ * @param {number} payload.category - category number
+ * @param {number} payload.calories - number of calories
+ * @param {number} payload.protein - grams of protein
+ * @param {number} payload.fat - grams of fat
+ * @param {number} payload.carbohydrates - grams of carbohydrates
+ */
+export function addFood({
+  name, category, calories, protein, fat, carbohydrates,
+}) {
+  return async (dispatch) => {
+    try {
+      const newFoodItem = await foodService.create({
+        name,
+        category,
+        calories,
+        protein,
+        fat,
+        carbohydrates,
+      });
+  
+      dispatch({
+        type: actionTypes.ADD_FOOD,
+        food: newFoodItem,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}

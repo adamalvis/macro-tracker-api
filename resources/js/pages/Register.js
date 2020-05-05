@@ -1,11 +1,10 @@
-import React, { Component, isValidElement } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TextBox from '../components/form/TextBox';
 import { Button } from 'react-bulma-components';
 import { register } from '../state/actions/user.actions';
 import { isValidEmail, isValidPassword } from '../utilities/validation.utility';
-import { Link } from 'react-router-dom';
 import UnverifiedEmail from '../components/UnverifiedEmail';
 
 const FIELDS = {
@@ -74,7 +73,7 @@ class Register extends Component {
 
   render() {
     const { errors, name, email, password, confirmedPassword } = this.state;
-    const { registeredSuccessfully, registeredEmail } = this.props;
+    const { registeredSuccessfully } = this.props;
 
     return (
       <div className="registration-page">
@@ -128,11 +127,14 @@ class Register extends Component {
 }
 
 Register.propTypes = {
-  registeredEmail: PropTypes.string,
+  registeredSuccessfully: PropTypes.bool,
+};
+
+Register.defaultProps = {
+  registeredSuccessfully: false,
 };
 
 const mapStateToProps = state => ({
-  registeredEmail: state?.user?.email,
   registeredSuccessfully: state?.user?.registeredSuccessfully,
 });
 

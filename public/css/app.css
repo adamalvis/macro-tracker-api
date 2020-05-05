@@ -1548,3 +1548,13 @@ a.has-text-danger:focus {
   font-weight: 400;
 }
 
+.add-food-button {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+.add-food-button i {
+  margin-right: 5px;
+}
+

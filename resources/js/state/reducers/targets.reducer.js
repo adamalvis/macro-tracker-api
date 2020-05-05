@@ -6,11 +6,12 @@ const initialState = {
   fat: null,
   carbohydrates: null,
   isUpdated: null,
+  isLoaded: false,
 };
 
 function loadTargets(state, action) {
   const { targets } = action;
-  return { ...state, ...targets };
+  return { ...state, ...targets, isLoaded: true, };
 }
 
 export default (state = initialState, action) => {

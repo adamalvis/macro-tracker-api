@@ -10,7 +10,7 @@ class DailyTargets extends Component {
 
     return (
       <div className="daily-targets">
-        <h2 class="is-size-2" style={{ marginBottom: '10px' }}>Daily Report</h2>
+        <h2 className="is-size-2" style={{ marginBottom: '10px' }}>Daily Report</h2>
         <div className="columns is-mobile">
           <div className="column">
             <TargetBlock consumed={totals.calories} target={targets.calories} />

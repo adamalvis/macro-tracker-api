@@ -5,14 +5,19 @@ import { getActiveUser } from '../state/selectors/user.selectors';
 import { loadTodaysFood } from '../state/actions/food.actions';
 import DailyTargets from '../components/DailyTargets';
 import { loadTargets } from '../state/actions/targets.actions';
-import { Button } from 'react-bulma-components';
+import AddFoodButton from '../components/AddFoodButton';
 
 class Home extends Component {
   componentDidMount() {
-    const { loadTodaysFood, loadTargets } = this.props;
+    const { loadTodaysFood, loadTargets, todaysFood, targets } = this.props;
 
-    loadTodaysFood();
-    loadTargets();
+    if (!todaysFood || todaysFood.length < 1) {
+      loadTodaysFood();
+    }
+    
+    if (!targets || !targets.isLoaded) {
+      loadTargets();
+    }
   }
 
   render() {
@@ -33,6 +38,7 @@ class Home extends Component {
           targets={targets}
           food={todaysFood}
         />
+        <AddFoodButton onClick={this.handleAddFoodButtonClick} />
       </div>
     );
   }
