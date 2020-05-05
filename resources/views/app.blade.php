@@ -5,18 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>MacroTracker</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-        <link href="/css/app.css" rel="stylesheet" />
     </head>
     <body>
-        <div id="app"></div>
-
-        <script src="/js/app.js"></script>
-        @if(config('app.env') == 'local')
-            <script src="http://localhost:35729/livereload.js"></script>
-        @endif
+        Why are you here?
     </body>
 </html>
