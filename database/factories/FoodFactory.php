@@ -15,7 +15,7 @@ $factory->define(Food::class, function (Faker $faker) {
         'fat' => $faker->numberBetween(2, 5),
         'carbohydrates' => $faker->numberBetween(2, 5),
         'category' => $faker->numberBetween(0, 3),
-        'logged_on' => new DateTime(),
+        'logged_on' => new DateTime('America/New_York'),
         'user_id' => 1,
     ];
 });
